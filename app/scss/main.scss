@@ -1,0 +1,94 @@
+@import "reset";
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: #fafafa;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 14fr 18fr;
+}
+
+.calendar {
+    background-color: white;
+    border-radius: 16px;
+}
+
+.days {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+
+    &_line {
+        display: flex;
+
+        &-wrapper {
+            margin: 0 25px;
+            max-width: 840px;
+            width: 840;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+    }
+}
+
+.day {
+    min-width: 100px;
+    min-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid #ffe4e0;
+    cursor: pointer;
+
+    &_text {
+        align-self: center;
+    }
+}
+
+.active {
+    background-color: #ffb9b8;
+}
+
+.btns {
+    display: flex;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.week {
+    margin-right: 10px;
+    background-image: url("../public/arrow.png");
+}
+
+.mounth {
+    background-image: url("../public/double-arrow.png");
+}
+
+.left {
+    transform: rotateY(180deg);
+}
+
+.month__wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
